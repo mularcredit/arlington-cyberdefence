@@ -11,7 +11,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         contact: resolve(__dirname, 'contact.html'),
         requestQuotation: resolve(__dirname, 'request-quotation.html'),
-        quotation: resolve(__dirname, 'quotation.html')
+        quotation: resolve(__dirname, 'quotation.html'),
+        termsAndConditions: resolve(__dirname, 'terms-and-conditions.html')
       }
     }
   }

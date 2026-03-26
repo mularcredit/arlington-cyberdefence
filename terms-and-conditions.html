@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Terms & Conditions | Arlington Cyber Defense</title>
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="icon" href="/logo.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rethink+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+	<style>
+		:root {
+			--bg: #060d1a;
+			--surface: #0b1526;
+			--border: rgba(255,255,255,0.07);
+			--green: #00E676;
+			--green-dark: #16a34a;
+			--text: #e2e8f0;
+			--text-muted: #94a3b8;
+			--font-family: 'Inter', sans-serif;
+			--font-heading: 'Rethink Sans', sans-serif;
+		}
+
+		* { box-sizing: border-box; margin: 0; padding: 0; }
+
+		body {
+			background-color: var(--bg);
+			color: var(--text);
+			font-family: var(--font-family);
+			font-size: 1rem;
+			line-height: 1.7;
+		}
+
+		/* NAV */
+		.nav {
+			background: #070b14;
+			border-bottom: 1px solid var(--border);
+			padding: 1.25rem 2rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: sticky;
+			top: 0;
+			z-index: 100;
+		}
+		.nav img { max-height: 40px; width: auto; object-fit: contain; }
+		.nav-links { display: flex; gap: 2rem; list-style: none; }
+		.nav-links a {
+			color: var(--text-muted);
+			text-decoration: none;
+			font-size: 0.95rem;
+			transition: color 0.2s;
+		}
+		.nav-links a:hover { color: var(--green); }
+
+		/* HERO */
+		.hero {
+			background: linear-gradient(135deg, #060d1a 0%, #0a1628 50%, #060d1a 100%);
+			border-bottom: 1px solid var(--border);
+			padding: 5rem 2rem 4rem;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+		.hero::before {
+			content: '';
+			position: absolute;
+			top: -40%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 600px;
+			height: 600px;
+			background: radial-gradient(circle, rgba(0,230,118,0.06) 0%, transparent 70%);
+			pointer-events: none;
+		}
+		.hero-badge {
+			display: inline-block;
+			padding: 0.35rem 1rem;
+			background: rgba(0,230,118,0.1);
+			border: 1px solid rgba(0,230,118,0.3);
+			border-radius: 100px;
+			color: var(--green);
+			font-size: 0.8rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: 1.5rem;
+		}
+		.hero h1 {
+			font-family: var(--font-heading);
+			font-size: clamp(2rem, 5vw, 3.5rem);
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 1rem;
+			line-height: 1.15;
+		}
+		.hero p {
+			color: var(--text-muted);
+			font-size: 1.1rem;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		/* CONTENT */
+		.content-wrapper {
+			max-width: 860px;
+			margin: 0 auto;
+			padding: 4rem 2rem 5rem;
+		}
+
+		.effective-date {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			background: rgba(0,230,118,0.06);
+			border: 1px solid rgba(0,230,118,0.15);
+			border-radius: 8px;
+			padding: 0.75rem 1.25rem;
+			margin-bottom: 3rem;
+			font-size: 0.9rem;
+			color: var(--green);
+		}
+		.effective-date span { color: var(--text-muted); }
+
+		.toc {
+			background: var(--surface);
+			border: 1px solid var(--border);
+			border-radius: 10px;
+			padding: 1.5rem 2rem;
+			margin-bottom: 3rem;
+		}
+		.toc h3 {
+			font-size: 0.85rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: var(--text-muted);
+			margin-bottom: 1rem;
+		}
+		.toc ol {
+			list-style: decimal;
+			padding-left: 1.25rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 0.4rem 2rem;
+		}
+		.toc li a {
+			color: var(--green);
+			text-decoration: none;
+			font-size: 0.92rem;
+			transition: opacity 0.2s;
+		}
+		.toc li a:hover { opacity: 0.75; }
+
+		.section {
+			margin-bottom: 3rem;
+			padding-bottom: 3rem;
+			border-bottom: 1px solid var(--border);
+		}
+		.section:last-child { border-bottom: none; }
+
+		.section h2 {
+			font-family: var(--font-heading);
+			font-size: 1.4rem;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 1.25rem;
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+		}
+		.section h2 .section-num {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 28px;
+			height: 28px;
+			background: rgba(0,230,118,0.12);
+			border: 1px solid rgba(0,230,118,0.25);
+			border-radius: 50%;
+			font-size: 0.78rem;
+			color: var(--green);
+			font-weight: 700;
+			flex-shrink: 0;
+		}
+
+		.section p { color: var(--text); margin-bottom: 1rem; }
+		.section p:last-child { margin-bottom: 0; }
+
+		.section ul, .section ol {
+			padding-left: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		.section li {
+			color: var(--text);
+			margin-bottom: 0.5rem;
+		}
+
+		.highlight-box {
+			background: var(--surface);
+			border-left: 3px solid var(--green);
+			border-radius: 0 8px 8px 0;
+			padding: 1rem 1.25rem;
+			margin: 1.25rem 0;
+			font-size: 0.95rem;
+			color: var(--text-muted);
+		}
+
+		.warning-box {
+			background: rgba(220, 38, 38, 0.06);
+			border: 1px solid rgba(220, 38, 38, 0.2);
+			border-radius: 8px;
+			padding: 1rem 1.25rem;
+			margin: 1.25rem 0;
+			font-size: 0.95rem;
+			color: #fca5a5;
+		}
+
+		/* FOOTER */
+		.footer {
+			background: #070b14;
+			border-top: 1px solid var(--border);
+			padding: 3rem 2rem;
+			text-align: center;
+		}
+		.footer img { max-height: 36px; width: auto; margin-bottom: 1rem; }
+		.footer p { color: var(--text-muted); font-size: 0.88rem; }
+		.footer a { color: var(--green); text-decoration: none; }
+
+		@media (max-width: 640px) {
+			.toc ol { grid-template-columns: 1fr; }
+			.nav-links { display: none; }
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- NAVIGATION -->
+	<nav class="nav">
+		<a href="/"><img src="/logo.png" alt="Arlington Cyber Defense"></a>
+		<ul class="nav-links">
+			<li><a href="/">Home</a></li>
+			<li><a href="request-quotation.html">Get Quotation</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- HERO -->
+	<div class="hero">
+		<div class="hero-badge">Legal Document</div>
+		<h1>Terms & Conditions</h1>
+		<p>Please read these terms carefully before engaging Arlington Cyber Defense for any professional services.</p>
+	</div>
+
+	<!-- CONTENT -->
+	<div class="content-wrapper">
+
+		<div class="effective-date">
+			<strong>Effective Date:</strong>
+			<span>March 26, 2026 &nbsp;·&nbsp; Arlington Cyber Defense Ltd, Nairobi, Kenya</span>
+		</div>
+
+		<!-- TABLE OF CONTENTS -->
+		<div class="toc">
+			<h3>Table of Contents</h3>
+			<ol>
+				<li><a href="#scope">Scope of Agreement</a></li>
+				<li><a href="#services">Services Provided</a></li>
+				<li><a href="#payment">Payment Terms</a></li>
+				<li><a href="#confidentiality">Confidentiality</a></li>
+				<li><a href="#liability">Limitation of Liability</a></li>
+				<li><a href="#ip">Intellectual Property</a></li>
+				<li><a href="#conduct">Client Obligations</a></li>
+				<li><a href="#termination">Termination</a></li>
+				<li><a href="#governing-law">Governing Law</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ol>
+		</div>
+
+		<!-- SECTION 1 -->
+		<div class="section" id="scope">
+			<h2><span class="section-num">1</span>Scope of Agreement</h2>
+			<p>These Terms and Conditions ("Agreement") constitute a legally binding contract between <strong>Arlington Cyber Defense Ltd</strong> ("Company," "We," "Us") and the Client ("You," "Client") engaging our cybersecurity services.</p>
+			<p>This Agreement governs all penetration testing, vulnerability assessments, security audits, and related consulting services delivered by Arlington Cyber Defense. By issuing a signed quotation confirmation or making a payment, you acknowledge and agree to these terms in full.</p>
+		</div>
+
+		<!-- SECTION 2 -->
+		<div class="section" id="services">
+			<h2><span class="section-num">2</span>Services Provided</h2>
+			<p>Arlington Cyber Defense provides the following categories of professional cybersecurity services:</p>
+			<ul>
+				<li>Web Application Penetration Testing</li>
+				<li>API Security & Exploit Auditing</li>
+				<li>Network & Infrastructure Vulnerability Assessment</li>
+				<li>DDoS Resilience and Load Testing</li>
+				<li>Financial Transaction Tampering Analysis</li>
+				<li>Post-Engagement Remediation Reporting</li>
+			</ul>
+			<div class="highlight-box">
+				All services are performed exclusively on systems, applications, or infrastructure expressly authorized by the Client in the signed Scope of Work. Unauthorized testing of third-party systems is strictly prohibited and will result in immediate termination.
+			</div>
+		</div>
+
+		<!-- SECTION 3 -->
+		<div class="section" id="payment">
+			<h2><span class="section-num">3</span>Payment Terms</h2>
+			<p>All fees are quoted in Kenyan Shillings (KES) unless otherwise stated in the formal quotation document.</p>
+			<ul>
+				<li><strong>Deposit:</strong> A non-refundable deposit of <strong>KES 30,000</strong> is required before any engagement may commence. This secures the assessment timeline and allocates dedicated resources to your project.</li>
+				<li><strong>Balance:</strong> The remaining balance is due upon delivery of the final penetration test report.</li>
+				<li><strong>Late Payments:</strong> Outstanding balances not settled within 14 days of the invoice date will attract a 2% monthly surcharge.</li>
+				<li><strong>Accepted Methods:</strong> Bank Transfer to ARLINGTON STUDIOS (Account No. 1339162997) or M-Pesa Buy Goods Till No. 7003708.</li>
+			</ul>
+			<div class="warning-box">
+				Commencement of work is strictly conditional upon receipt of the required deposit. Arlington Cyber Defense reserves the right to suspend or cancel services for non-payment without liability.
+			</div>
+		</div>
+
+		<!-- SECTION 4 -->
+		<div class="section" id="confidentiality">
+			<h2><span class="section-num">4</span>Confidentiality</h2>
+			<p>Both parties agree to maintain strict confidentiality regarding all information exchanged in the course of the engagement. This includes but is not limited to:</p>
+			<ul>
+				<li>Vulnerabilities, exploits, and technical findings discovered during testing</li>
+				<li>Architecture diagrams, source code, and infrastructure details shared by the Client</li>
+				<li>Proprietary testing methodologies, tools, and payloads belonging to Arlington Cyber Defense</li>
+			</ul>
+			<p>All deliverables — including penetration test reports — are classified as confidential and intended solely for internal use by the Client's authorized security personnel. Unauthorized distribution of reports may result in legal action.</p>
+			<p>This confidentiality obligation survives the termination of the engagement for a period of <strong>five (5) years</strong>.</p>
+		</div>
+
+		<!-- SECTION 5 -->
+		<div class="section" id="liability">
+			<h2><span class="section-num">5</span>Limitation of Liability</h2>
+			<p>Arlington Cyber Defense performs all engagements with industry-standard care and professionalism. However, penetration testing is an inherently high-risk activity. The Client acknowledges and accepts the following:</p>
+			<ul>
+				<li>Testing may cause temporary disruption to services or systems under assessment.</li>
+				<li>Arlington Cyber Defense shall not be liable for unintended downtime, data loss, or collateral damage arising from authorized testing activities.</li>
+				<li>Our total aggregate liability shall not exceed the total fees paid by the Client for the specific engagement in question.</li>
+			</ul>
+			<div class="highlight-box">
+				The Client is responsible for maintaining full and current backups of all systems prior to the commencement of any testing engagement.
+			</div>
+		</div>
+
+		<!-- SECTION 6 -->
+		<div class="section" id="ip">
+			<h2><span class="section-num">6</span>Intellectual Property</h2>
+			<p>All penetration testing reports, methodologies, custom tooling, and technical documentation produced during an engagement remain the intellectual property of Arlington Cyber Defense until full payment is received, at which point the final deliverable report is licensed to the Client for internal use only.</p>
+			<p>The Client may not reproduce, resell, publish, or sublicense any deliverable without prior written consent from Arlington Cyber Defense.</p>
+		</div>
+
+		<!-- SECTION 7 -->
+		<div class="section" id="conduct">
+			<h2><span class="section-num">7</span>Client Obligations</h2>
+			<p>The Client agrees to:</p>
+			<ul>
+				<li>Provide accurate and complete information regarding the scope, architecture, and ownership of all target systems.</li>
+				<li>Obtain all necessary legal authorizations and notify relevant hosting providers, ISPs, and third-party vendors before testing commences.</li>
+				<li>Designate a primary technical contact who will be available during the engagement to respond to queries.</li>
+				<li>Not engage Arlington Cyber Defense for testing against any system, network, or application not owned or explicitly authorized by you.</li>
+			</ul>
+			<div class="warning-box">
+				Engaging our services to attack unauthorized systems is illegal. Arlington Cyber Defense cooperates fully with law enforcement and will immediately terminate the engagement with forfeiture of all deposits if unauthorized activity is discovered.
+			</div>
+		</div>
+
+		<!-- SECTION 8 -->
+		<div class="section" id="termination">
+			<h2><span class="section-num">8</span>Termination</h2>
+			<p>Either party may terminate this engagement with <strong>7 days' written notice</strong> prior to the scheduled start date. The deposit is non-refundable in all cases.</p>
+			<p>Arlington Cyber Defense reserves the right to immediately terminate an engagement — without refund — in the event of:</p>
+			<ul>
+				<li>Client breach of scope restrictions or confidentiality obligations</li>
+				<li>Discovery that the target systems are not owned or authorized by the Client</li>
+				<li>Non-payment of outstanding invoices</li>
+				<li>Conduct that threatens the safety or integrity of Arlington Cyber Defense personnel or systems</li>
+			</ul>
+		</div>
+
+		<!-- SECTION 9 -->
+		<div class="section" id="governing-law">
+			<h2><span class="section-num">9</span>Governing Law</h2>
+			<p>This Agreement shall be governed by and construed in accordance with the laws of the <strong>Republic of Kenya</strong>. Any disputes arising under or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts of Nairobi, Kenya.</p>
+			<p>Arlington Cyber Defense operates in compliance with the <strong>Computer Misuse and Cybercrimes Act, 2018 (Kenya)</strong>, and is registered with the Communications Authority of Kenya and the National Computer and Cybercrime Coordination Committee (NC4).</p>
+		</div>
+
+		<!-- SECTION 10 -->
+		<div class="section" id="contact">
+			<h2><span class="section-num">10</span>Contact</h2>
+			<p>For questions regarding these Terms and Conditions, or to request a formal engagement, please contact us:</p>
+			<div class="highlight-box">
+				<strong style="color: #fff; display: block; margin-bottom: 0.5rem;">Arlington Cyber Defense Ltd</strong>
+				Western Heights Building, along Karuna Road, opposite Sarit Centre<br>
+				Westlands, Nairobi, Kenya<br><br>
+				📧 <a href="mailto:defend@arlington-cyberdefense.space" style="color: var(--green); text-decoration: none;">defend@arlington-cyberdefense.space</a><br>
+				🌐 <a href="https://arlington-cyberdefense.space" style="color: var(--green); text-decoration: none;">arlington-cyberdefense.space</a>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<a href="/"><img src="/logo.png" alt="Arlington Cyber Defense"></a>
+		<p style="margin-bottom: 0.5rem;">© 2026 Arlington Cyber Defense Ltd. All rights reserved.</p>
+		<p>This page is not publicly indexed. Access is by direct link only.</p>
+	</footer>
+
+</body>
+</html>
