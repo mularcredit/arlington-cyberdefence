@@ -14,20 +14,6 @@ const Footer = () => {
               We make cybersecurity easy—from consultation to implementation.
             </p>
           </div>
-          <div className="footer-subscribe">
-            <h3 className="subscribe-title">Subscribe our newsletter</h3>
-            <form className="subscribe-form" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Email e.g. sam@arlington.com" 
-                className="subscribe-input"
-                required
-              />
-              <button type="submit" className="btn-primary subscribe-btn">
-                Send <span className="arrow">→</span>
-              </button>
-            </form>
-          </div>
         </div>
 
         {/* Footer Links Grid */}
