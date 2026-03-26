@@ -243,24 +243,24 @@ const puppeteer = require('puppeteer');
     .totals-container {
         width: 45%;
         margin-left: auto;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.75rem;
     }
     
     .total-row {
         display: flex;
         justify-content: space-between;
-        padding: 0.75rem 0;
+        padding: 0.35rem 0;
         border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-        font-size: 0.95rem;
+        font-size: 0.88rem;
         color: #475569;
     }
     
     .total-row.grand-total {
         font-weight: 700;
-        font-size: 1.25rem;
+        font-size: 1.05rem;
         color: #0f172a;
         border-bottom: none;
-        padding-top: 1rem;
+        padding-top: 0.5rem;
     }
     
     .grand-total .val {
@@ -268,10 +268,10 @@ const puppeteer = require('puppeteer');
     }
     
     .terms {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         color: #64748b;
         background: transparent;
-        padding: 1.5rem 0;
+        padding: 0.6rem 0;
         border-top: 1px solid #e2e8f0;
     }
     
@@ -283,7 +283,7 @@ const puppeteer = require('puppeteer');
     }
     
     .signature-area {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         display: flex;
         justify-content: space-between;
     }
@@ -294,8 +294,8 @@ const puppeteer = require('puppeteer');
     
     .sign-line {
         border-bottom: 1px solid #94a3b8;
-        margin-bottom: 0.5rem;
-        height: 40px;
+        margin-bottom: 0.3rem;
+        height: 28px;
     }
     
     .sign-text {
@@ -604,13 +604,6 @@ const puppeteer = require('puppeteer');
             </div>
 
             <div style="page-break-inside: avoid;">
-            <div class="terms" style="margin-bottom: 0.75rem;">
-                <h4 style="margin: 0.5rem 0 0.4rem;">Terms of Engagement</h4>
-                <p style="margin:0; font-size: 0.85rem;">1. <strong>Payment:</strong> A deposit of 30,000 will be paid before commencement of work; balance due Net-15 upon final report.<br>
-                   2. <strong>Confidentiality:</strong> Arlington will execute a mutual NDA prior to assessment initiation.<br>
-                   3. <strong>Retesting:</strong> Includes one complimentary verification retest cycle within 30 days of the report delivery.</p>
-            </div>
-            
             <div class="signature-area" style="margin-top: 0.75rem;">
                 <div class="sign-block">
                     <div class="sign-line"></div>
